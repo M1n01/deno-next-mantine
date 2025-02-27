@@ -1,18 +1,23 @@
 import { NextRequest } from "next/server";
 import data from "../data.json" with { type: "json" };
 
-type RouteParams = { params: Promise<{ dinosaur: string }> };
-
-export const GET = async (request: NextRequest, { params }: RouteParams) => {
-  const { dinosaur } = await params;
-
+export const GET = async (
+  request: NextRequest,
+  { params }: { params: Promise<{ dinosaurs: string }> }
+) => {
+  const dinosaur = (await params).dinosaurs;
+  
   if (!dinosaur) {
-    return Response.json("No dinosaur name provided.");
+    return Response.json({ error: "No dinosaur name provided." }, { status: 400 });
   }
 
   const dinosaurData = data.find((item) =>
     item.name.toLowerCase() === dinosaur.toLowerCase()
   );
 
-  return Response.json(dinosaurData ? dinosaurData : "No dinosaur found.");
+  if (!dinosaurData) {
+    return Response.json({ error: "Dinosaur not found." }, { status: 404 });
+  }
+
+  return Response.json(dinosaurData);
 };

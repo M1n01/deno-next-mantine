@@ -8,6 +8,7 @@
     "npm:@mantine/form@^7.17.0": "7.17.0_react@19.0.0",
     "npm:@mantine/hooks@*": "7.17.0_react@19.0.0",
     "npm:@mantine/hooks@^7.17.0": "7.17.0_react@19.0.0",
+    "npm:@tabler/icons-react@^3.30.0": "3.30.0_react@19.0.0",
     "npm:@types/node@20": "20.17.19",
     "npm:@types/react-dom@19": "19.0.4_@types+react@19.0.10",
     "npm:@types/react@19": "19.0.10",
@@ -314,6 +315,16 @@
       "dependencies": [
         "tslib"
       ]
+    },
+    "@tabler/icons-react@3.30.0_react@19.0.0": {
+      "integrity": "sha512-9KZ9D1UNAyjlLkkYp2HBPHdf6lAJ2aelDqh8YYAnnmLF3xwprWKxxW8+zw5jlI0IwdfN4XFFuzqePkaw+DpIOg==",
+      "dependencies": [
+        "@tabler/icons",
+        "react"
+      ]
+    },
+    "@tabler/icons@3.30.0": {
+      "integrity": "sha512-c8OKLM48l00u9TFbh2qhSODMONIzML8ajtCyq95rW8vzkWcBrKRPM61tdkThz2j4kd5u17srPGIjqdeRUZdfdw=="
     },
     "@types/estree@1.0.6": {
       "integrity": "sha512-AYnb1nQyY49te+VRAVgmzfcgjYS91mY5P0TKUDCLEM+gNnA+3T6rWITXRLYCpahpqSQbN5cE+gHpnPyXjHWxcw=="
@@ -2288,6 +2299,7 @@
         "npm:@mantine/core@^7.17.0",
         "npm:@mantine/form@^7.17.0",
         "npm:@mantine/hooks@^7.17.0",
+        "npm:@tabler/icons-react@^3.30.0",
         "npm:@types/node@20",
         "npm:@types/react-dom@19",
         "npm:@types/react@19",
