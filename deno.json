@@ -1,3 +1,8 @@
 {
-  "unstable": ["unsafe-proto"]
+  "unstable": ["unsafe-proto"],
+  "imports": {
+    "@mantine/core": "npm:@mantine/core",
+    "@mantine/hooks": "npm:@mantine/hooks",
+    "@mantine/form": "npm:@mantine/form"
+  }
 }
