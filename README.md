@@ -1,49 +1,54 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with
-[`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Deno Mantine
 
-## Getting Started
+このプロジェクトは、Next.js + DenoとMantineを組み合わせたWebアプリケーションです。
 
-First, run the development server:
+## 特徴
+
+- Denoランタイムを使用したNext.jsアプリケーション
+- MantineによるモダンなUIコンポーネント
+- APIルートによる恐竜データの提供
+- TypeScript完全対応
+
+## 開発を始める
+
+### 必要な環境
+
+- Deno（最新版）
+- Node.js（開発ツール用）
+
+### 開発サーバーの起動
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# 開発サーバーの起動
+deno task dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the
-result.
+[http://localhost:3000](http://localhost:3000) をブラウザで開いて結果を確認できます。
 
-You can start editing the page by modifying `app/page.tsx`. The page
-auto-updates as you edit the file.
+## APIエンドポイント
 
-This project uses
-[`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts)
-to automatically optimize and load [Geist](https://vercel.com/font), a new font
-family for Vercel.
+### 恐竜データAPI
 
-## Learn More
+- `GET /api/dinosaurs`: すべての恐竜データを取得
+- `GET /api/dinosaurs/[name]`: 特定の恐竜のデータを取得
 
-To learn more about Next.js, take a look at the following resources:
+## 開発ガイドライン
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js
-  features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### コードスタイル
 
-You can check out
-[the Next.js GitHub repository](https://github.com/vercel/next.js) - your
-feedback and contributions are welcome!
+- `deno fmt` を使用してコードフォーマットを統一
+- `deno lint` でコードの品質を維持
 
-## Deploy on Vercel
+### テスト
 
-The easiest way to deploy your Next.js app is to use the
-[Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme)
-from the creators of Next.js.
+```bash
+# テストの実行
+deno task test
 
-Check out our
-[Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying)
-for more details.
+# カバレッジレポートの生成
+deno task test:cov
+```
+
+## ライセンス
+
+MITライセンスで提供されています。詳細は[LICENSE](LICENSE)ファイルを参照してください。
