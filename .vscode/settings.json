@@ -1,13 +1,4 @@
 {
   "github.copilot.chat.codeGeneration.instructions": [
-    {
-      "file": ".github/prompts/rules/deno.md",
-    },
-    {
-      "file": ".github/prompts/rules/00_basic.md",
-    },
-    {
-      "file": ".github/prompts/rules/typescript.md",
-    }
   ]
 }
